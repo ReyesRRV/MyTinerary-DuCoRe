@@ -1,0 +1,50 @@
+.Activities-container {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.Activity-card {
+    height: 30vh;
+    width: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.Activity-card p {
+    font-size: 2rem;
+    background-color: rgba(13, 88, 149, 0.567);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .Activity-card {
+        height: 20vh;
+    }
+}
+
+@media (min-width: 1440px) {
+    .Activities-container {
+        max-width: 100%;
+    }
+    .Activity-card {
+        width: 30vh;
+        height: 30vh;
+    }
+}
+
+
