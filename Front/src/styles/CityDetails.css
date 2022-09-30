@@ -1,0 +1,76 @@
+.CityDetails-container {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: #061116;
+}
+
+/* --------- BANNER WELCOME ----------- */
+
+.CityDetails-banner {
+    border-radius: 5rem;
+    overflow: hidden;
+    height: 40vh;
+    min-width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.CityDetails-bannerColor {
+    background-color: #06111696;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.CityDetails-banner h3 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 2rem;
+}
+
+.Banner-welcome {
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.Banner-city {
+    color: #00D3EA;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* --------- DETAILS INFO ------------ */
+
+
+.CityDetails-info {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .CityDetails-banner {
+        min-width: 70%;
+    }
+}
+.hidden-no-user{
+    opacity: 0;
+    z-index: -1;
+}
