@@ -1,0 +1,110 @@
+.Itinerary-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.card {
+    width: 90%;
+    max-width: 900px;
+    height: 380px;
+    background: #ECE9E6;
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    overflow: visible;
+    box-shadow: 0 5px 20px 2px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+   }
+   
+   .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+   }
+
+   .info-pd {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   }
+   
+   .card-img {
+    --size: 120px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    transition: all .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    border: 0.8rem solid #f5f5f5;
+    overflow: hidden;
+   }
+
+   .card-img img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+   }
+   
+   /*Text*/
+   .text-user {
+    font-size: .8em;
+    text-align: center;
+    color: #6f6d78;
+    font-weight: 400;
+    font-style: italic;
+    padding: 0 1rem;
+   }
+
+   .text-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00A4DA;
+    letter-spacing: 0.05rem;
+   }
+   
+   .text-body {
+    font-size: 1rem;
+    text-align: center;
+    color: #2a2a2b;
+    font-weight: 600;
+    padding: 0 1rem;
+   }
+
+   .text-tags {
+    text-align: center;
+    padding: 0 1rem;
+    margin-top: 2rem;
+   }
+   
+   /*Hover*/
+   .card:hover .card-img {
+    --size: 110px;
+    width: var(--size);
+    height: var(--size);
+   }
+
+   .horizontal-line {
+    width: 100%;
+    border: #00D3EA 1px solid;
+    margin-top: 10px;
+    margin-bottom: 25px;
+   }
+
+.likeDislike{
+    cursor: pointer;
+}
