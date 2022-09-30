@@ -1,0 +1,41 @@
+.Hero-top a {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: #00D3EA;
+    background-color: #061116;
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+    width: 300px;
+    text-decoration: none;
+   }
+   
+   .Hero-top a img {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+   }
+   
+   .Hero-top a span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+   }
+   
+   .Hero-top a:hover img {
+    transform: translateX(5px) rotate(120deg);
+    cursor: pointer;
+   }
+   
+   .Hero-top a:hover span {
+    transform: translateX(7px);
+    cursor: pointer;
+   }
+
+   .Hero-top a:hover {
+    outline: none;
+    border-color: rgba(0, 211, 234, 0.5);
+    box-shadow: 0 0 0 4px rgb(0 211 234 / 10%);
+   }
