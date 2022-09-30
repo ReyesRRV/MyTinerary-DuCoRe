@@ -1,0 +1,26 @@
+.Carousel-container button {
+    display: none;
+    background-color: #00D3EA;
+    color: #061116;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+}
+    .Carousel-container button:hover {
+        background-color: #00A4DA;
+        color: white;
+        transition: 0.4s;
+        scale: 1.2;
+        font-size: 15px;
+    }
+
+
+@media (min-width: 768px){
+    .Carousel-container button {
+        display: block;  
+    }
+}
+
