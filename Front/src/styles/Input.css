@@ -1,0 +1,26 @@
+.Input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.Input-wrapper input {
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 290px;
+    border-radius: 1rem;
+    color: #061116;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+   }
+   
+   .Input-wrapper input:focus {
+    outline-color: #00D3EA;
+   }
+
+   label {
+    color: white;
+   }
