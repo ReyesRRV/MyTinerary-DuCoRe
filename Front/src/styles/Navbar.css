@@ -1,0 +1,28 @@
+.Nav-desktop, .Nav-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.Nav-mobile {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .Nav-desktop {
+        display: none;
+    }
+
+    .Nav-mobile {
+        display: flex;
+        flex-wrap: wrap;
+        background: #061116;
+    }
+
+    .Nav-hamburguer {
+        cursor: pointer;
+    }
+    
+}
