@@ -1,0 +1,22 @@
+.ButtonBack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0.8em 1.3em;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: 0.2s;
+    text-transform: uppercase;
+}
+
+.ButtonBack:hover {
+    transition: 0.2s;
+    scale: 1.05;
+    color: #00D3EA;
+}
