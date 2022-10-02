@@ -11,12 +11,9 @@ export default function Comments(props) {
   let [getItinerariesComments, { data: comment }] =
     useGetItinerariesCommentsMutation();
   let [addNewCommentRedux, { data: resComment }] = useCreateCommentMutation();
-  let [{data : resEditComment}] = useEditCommentMutation()
-  let user = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : ""
-
-
-  let resHook = resComment?.response;
-  let arrayComments = comment?.response;
+  let user = localStorage.getItem("user")
+    ? JSON.parse(localStorage.getItem("user"))
+    : "";
   let [openEdit, setOpenEdit] = useState(true);
   let [openNew, setOpenNew] = useState(false);
   let [comments, setComments] = useState("");
@@ -37,25 +34,6 @@ export default function Comments(props) {
     open ? setOpen(false) : setOpen(true);
   };
 
-  function openEditButton() {
-    openEdit ? setOpenEdit(false) : setOpenEdit(true);
-  }
-  function delButton() {
-    console.log("Borrar");
-  }
-  function editComment(e) {
-    e.preventDefault();
-    let id = commentRef.current.id;
-    let idUser = JSON.parse(localStorage.getItem("user")).id;
-
-    let dataComment = {
-      comment: commentRef.current.value,
-      user: idUser,
-      itinerary: id,
-    };
-    console.log(dataComment);
-    // editCommentRedux()
-  }
 
   function openComment() {
     openNew ? setOpenNew(false) : setOpenNew(true);
@@ -84,14 +62,14 @@ export default function Comments(props) {
               <CommentsCard edit={addNewCommentRedux} data={e} key={e._id} />
             ))}
           </div>
-          {user.role !== "" ?
-          (<>
-          <button className="comments-button" onClick={openComment}>
-            ➕
-          </button> 
-          </>)
-          : null}
-          {openNew  ? (
+          {user.role !== "" ? (
+            <>
+              <button className="comments-button" onClick={openComment}>
+                ➕
+              </button>
+            </>
+          ) : null}
+          {openNew ? (
             <form onSubmit={newComment}>
               <input
                 className="Input-input"

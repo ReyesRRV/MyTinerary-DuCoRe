@@ -20,8 +20,9 @@ function App() {
 
   useEffect(() => {
     localStorage.getItem("user") ? setUser(JSON.parse(localStorage.getItem("user")).role) : setUser("")
-  }, [])
-  
+  }, [JSON.parse(localStorage.getItem("user"))])
+  console.log(user)
+
   return (
     <BrowserRouter>
       <ScrollToTop />

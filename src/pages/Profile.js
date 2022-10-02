@@ -106,7 +106,7 @@ export default function Profile() {
         <form onSubmit={editUserButton}>
               {form.map((e) => (
                 <div className="EditProfile-form" key={e.Name}>
-                  <label className="EditProfile-labels" forHTML={e.Name}>{e.Name}</label>
+                  <label className="EditProfile-labels" for={e.Name}>{e.Name}</label>
                   <input
                   className="EditProfile-inputs"
                   id={e.Name}

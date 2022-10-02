@@ -82,12 +82,3 @@
         padding: 3%;
     }
 }
-.buttons-comments-ed{    
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30%;
-}
-.buttons-comments-ed div{
-    cursor: pointer;
-
-}

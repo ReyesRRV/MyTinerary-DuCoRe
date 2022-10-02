@@ -12,6 +12,7 @@ export default function CommentsCard(props) {
 let user = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : ""
 
 let userID = user.id
+
 let commentID = e.user._id
 
   let commentRef = useRef();

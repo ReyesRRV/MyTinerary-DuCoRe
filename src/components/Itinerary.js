@@ -1,11 +1,13 @@
 import React, { useState, useRef } from "react";
 import "../styles/Itinerary.css";
 import Activities from "./Activities";
-import Comments from "./DisplayComments";
+import Comments from "./Comments";
 import Alert from "../components/Alert/Alert";
 import { useCreateActivityMutation } from "../features/activitiesAPI";
-import {useDelItineraryMutation,useEditItineraryMutation,} from "../features/itineraryAPI";
-import Like from "../components/Itinerary/Like"
+import {
+  useDelItineraryMutation,
+  useEditItineraryMutation,
+} from "../features/itineraryAPI";
 
 export default function Itinerary({ item }) {
   let user = localStorage.getItem("user")
@@ -13,6 +15,7 @@ export default function Itinerary({ item }) {
     : "";
   let [open, setOpen] = useState(false);
   let [edit, setedit] = useState(false);
+  let [idItinerary, setIdItinerary] = useState();
   let nameRef = useRef();
   let photoRef = useRef();
   let nameIRef = useRef();
@@ -122,7 +125,6 @@ res.data  ? setMsg(res.data.message) : setMsg(res.error.data.message)
               {item.tags.map((tag) => "#" + tag + " ")}
             </p>
           </div>
-            <Like data={item}/>
         </div>
         {user.id === item.user._id ? (
           <>
@@ -162,7 +164,7 @@ res.data  ? setMsg(res.data.message) : setMsg(res.error.data.message)
         ) : (
           ""
         )}
-        
+
         <Activities itineraryId={item._id} />
         <Comments itineraryId={item._id} />
         <hr className="horizontal-line"></hr>

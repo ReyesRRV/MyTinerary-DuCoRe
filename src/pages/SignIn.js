@@ -10,13 +10,13 @@ export default function SignIn() {
   const passwordRef = useRef();
 
   const [SignInRedux, { data: signInRedux, error }] = useSignInMutation();
+
+  const [user, setUser] = useState();
   let id = signInRedux?.response.user;
-  let token = signInRedux?.response.token;
   let msg = "";
 
   if (signInRedux?.success) {
-    localStorage.setItem("user", JSON.stringify(id));
-    localStorage.setItem("token", token);
+    localStorage.setItem("user", JSON.stringify(id))
   }
 
   function handleSubmit(e) {
@@ -28,12 +28,14 @@ export default function SignIn() {
       from: "form",
     };
     SignInRedux(dataLog);
+    setUser(signInRedux);
   }
   if (signInRedux?.success) {
     msg = signInRedux.message;
   } else {
     msg = error?.data.message;
   }
+
 
   return (
     <div className="SignUp-container">
