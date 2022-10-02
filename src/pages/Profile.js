@@ -13,7 +13,7 @@ export default function Profile() {
     ? JSON.parse(localStorage.getItem("user")).id
     : "";
   let [getOneUser, { data: myUser }] = useGetOneUserMutation();
-  let [editUserRedux, { data: userResponse, error }] = useEditCityMutation();
+  let [editUserRedux, { data: userResponse }] = useEditCityMutation();
 
   let msg = userResponse?.message ? userResponse.message : "";
 
