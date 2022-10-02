@@ -1,6 +1,6 @@
 import React from "react";
 import { useGetItineraryByCUMutation } from "../features/itineraryAPI";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Itinerary from "../components/ItineraryPage";
 import "../styles/MyTinerary.css";
 import { Link as LinkRouter } from "react-router-dom";
@@ -15,8 +15,6 @@ id = user.id
 }
 
   const [getAllItinerary, { data: items }] = useGetItineraryByCUMutation();
-
-  const buttons = [{ label: "editItinerary" }, { label: "delateItinerary" }];
 
   useEffect(() => {
     getAllItinerary({ city: "", user: id });
