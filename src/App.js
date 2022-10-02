@@ -29,16 +29,16 @@ function App() {
       <WebsiteLayout>
         <Routes>
           <Route path="/" element={<Hero />} />
-          <Route path="/mytineraries" element={user == "" ? <UnderConstruction /> : <MyTinerares />}/>
-          <Route path="/newitinerary" element={user == "" ? <UnderConstruction /> : <NewItinerary />}/>
-          <Route path="/newcity" element={user == "admin" ? <NewCity /> : <UnderConstruction />} />
-          <Route path="/editcity" element={user == "admin" ? <EditCity /> : <UnderConstruction/>} />
+          <Route path="/mytineraries" element={user === "" ? <UnderConstruction /> : <MyTinerares />}/>
+          <Route path="/newitinerary" element={user === "" ? <UnderConstruction /> : <NewItinerary />}/>
+          <Route path="/newcity" element={user === "admin" ? <NewCity /> : <UnderConstruction />} />
+          <Route path="/editcity" element={user === "admin" ? <EditCity /> : <UnderConstruction/>} />
           <Route path="/auth/signup" element={<SignUp />} />
           <Route path="/auth/signin" element={<SignIn />} />
           <Route path="/cities" element={<Cities />} />
           <Route path="/*" element={<UnderConstruction />} />
           <Route path="/cities/:id" element={<City />} />
-          <Route path="/myprofile" element={user == "" ? <UnderConstruction /> : <Profile />} />
+          <Route path="/myprofile" element={user === "" ? <UnderConstruction /> : <Profile />} />
         </Routes>
       </WebsiteLayout>
     </BrowserRouter>
