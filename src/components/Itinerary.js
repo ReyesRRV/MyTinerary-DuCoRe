@@ -15,7 +15,6 @@ export default function Itinerary({ item }) {
     : "";
   let [open, setOpen] = useState(false);
   let [edit, setedit] = useState(false);
-  let [idItinerary, setIdItinerary] = useState();
   let nameRef = useRef();
   let photoRef = useRef();
   let nameIRef = useRef();
@@ -23,7 +22,7 @@ export default function Itinerary({ item }) {
   const durationRef = useRef();
   const tagsRef = useRef();
 
-  let [addActivityRedux, { data: activityAdded }] = useCreateActivityMutation();
+  let [addActivityRedux] = useCreateActivityMutation();
   let [deleteItineraryRedux] = useDelItineraryMutation();
   let [editItineraryRedux] = useEditItineraryMutation();
 let [msg , setMsg] = useState("")
