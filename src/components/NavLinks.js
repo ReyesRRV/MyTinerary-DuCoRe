@@ -4,7 +4,7 @@ export default function NavLinks() {
   let pages = []  
   let role = JSON.parse(localStorage.getItem("user")) ? JSON.parse(localStorage.getItem("user")).role : ""
 
-  if(role == "admin"){
+  if(role === "admin"){
 
     pages = [
       {name: 'Home', to: '/'},
@@ -14,7 +14,7 @@ export default function NavLinks() {
       {name: 'EditCity', to: '/editcity'},
       {name: 'New admin', to: 'auth/signup'},
     ]
-  }else if (role == "user"){
+  }else if (role === "user"){
     pages = [
       {name: 'Home', to: '/'},
       {name: 'Cities', to: '/cities'},
