@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import SignInGoogle from "../components/SignInGoogle";
 import "../styles/SignUp.css";
 import { Link as LinkRouter } from "react-router-dom";
@@ -11,7 +11,6 @@ export default function SignIn() {
 
   const [SignInRedux, { data: signInRedux, error }] = useSignInMutation();
 
-  const [user, setUser] = useState();
   let id = signInRedux?.response.user;
   let msg = "";
 
@@ -28,7 +27,6 @@ export default function SignIn() {
       from: "form",
     };
     SignInRedux(dataLog);
-    setUser(signInRedux);
   }
   if (signInRedux?.success) {
     msg = signInRedux.message;
