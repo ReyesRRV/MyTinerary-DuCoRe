@@ -4,13 +4,13 @@ import { useRef, useState} from "react"
 import { useSearchCitiesQuery } from '../features/citiesAPI'
 
 export default function Cities() {
-  const [searching, setSearching] = useState()
   const search = useRef("")
+  const [searching, setSearching] = useState()
   const handleValue = () => {
     setSearching(search.current.value)
   }
 
-  let { data: cities } = useSearchCitiesQuery(search.current ? search.current.value : "")
+  let { data: cities } = useSearchCitiesQuery(search.current ? searching : "")
 
   return (
     <div className='Cities-container'>
