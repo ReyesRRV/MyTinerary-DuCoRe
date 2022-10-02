@@ -72,7 +72,7 @@ export default function SignUp() {
       country: countryRef.current.value,
       password: passwordRef.current.value,
       photo: photoRef.current.value,
-      role: role == "admin" ? "admin" : "user" ,
+      role: role === "admin" ? "admin" : "user" ,
       from: "form"
     }
 
