@@ -2,7 +2,6 @@ import React from "react";
 import { useState ,useRef } from "react";
 import Alert from "../Alert/Alert";
 import {  useDelItineraryMutation,  useEditItineraryMutation,} from "../../features/itineraryAPI";
-import PopUp from "../Alert/PopUp";
 
 export default function EditItinerary(props) {
 let item = props.data
